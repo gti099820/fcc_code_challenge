@@ -25,7 +25,7 @@ This pipeline uses `pandas` for data transformation and `pytest` for testing.
 ---
 
 ## 3. Project Structure
-
+```bash
 dice_game_etl/
 |
 |-- data/
@@ -61,7 +61,7 @@ dice_game_etl/
 |-- analysis_report.md
 |-- requirements.txt
 |-- README.md
-
+```
 ---
 
 ## 4. Setup and Installation
@@ -97,21 +97,15 @@ With your virtual environment active and from the root `dice_game_etl/` director
 
 ```bash
 python main.py
-
+```
 This command will:
+- Load all raw data from data/raw/.
+- Run data quality checks.
+- Build all dimensions and facts and save them to data/processed/.
+- Generate all 8 insights and save them to analysis_report.md.
 
-Load all raw data from data/raw/.
-
-Run data quality checks.
-
-Build all dimensions and facts and save them to data/processed/.
-
-Generate all 8 insights and save them to analysis_report.md.
-
-Run Tests
-To verify the transformation logic, run pytest from the root directory:
-
-Bash
-
-pytest
-
+Run Tests:
+- To verify the transformation logic, run pytest from the root directory:
+```bash
+Bash pytest
+```
